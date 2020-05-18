@@ -1,3 +1,3 @@
-#My Todo App Travis-Ci
-#Testing ssh
-[![Build Status](https://travis-ci.org/tomnsa1/todo-cloud-starter.svg?branch=master)](https://travis-ci.org/tomnsa1/todo-cloud-starter)
+#My Todo Cloud App 
+
+[![Build Status](https://travis-ci.org/Shakirat991/Todo-Cloud1.svg?branch=master)](https://travis-ci.org/Shakirat991/Todo-Cloud1)
