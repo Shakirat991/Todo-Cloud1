@@ -27,13 +27,13 @@ before_install:
  
 # Build development images for test
 before_script:
-  - docker build ./todo-view -f ./todo-view/Dockerfile.dev -t juniornsa/todo-view-test
-  - docker build ./todo-cache-service -f Dockerfile.nodejs.dev -t juniornsa/todo-cache-service-test
+  - docker build ./todo-view -f ./todo-view/Dockerfile.dev -t shakirat991/todo-view-test
+  - docker build ./todo-cache-service -f Dockerfile.nodejs.dev -t shakirat991/todo-cache-service-test
  
 # Run some tests
 script:
-  - docker run juniornsa/todo-view-test npm test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
-  - docker run juniornsa/todo-cache-service-test npm test
+  - docker run shakirat991/todo-view-test npm test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
+  - docker run shakirat991/todo-cache-service-test npm test
  
 after_success:
   # Build Production Images for deployment
@@ -49,7 +49,7 @@ deploy:
   region: eu-central-1
   app: Todo Application
   env: TodoApplication-env
-  bucket_name: elasticbeanstalk-eu-central-1-956544467856
+  bucket_name: elasticbeanstalk-us-east-1-338251905064
   bucket_path: todo-app
   on:
     branch: master
